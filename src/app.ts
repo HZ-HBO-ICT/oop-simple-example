@@ -1,40 +1,77 @@
-class Animal
-{
-  private readonly name: string;
+//  Interface to declare
+interface Teacher {
+  name: string;
+  profession: string;
+  brand: string;
+}
 
-  private readonly legs: number;
+const teachers: Teacher[] = [
+  {
+    name: 'Loek',
+    profession: 'Teacher',
+    brand: 'Linux',
+  },
+  {
+    name: 'Elio',
+    profession: 'Teacher',
+    brand: 'Windows',
+  },
+  {
+    name: 'Daan',
+    profession: 'Teacher',
+    brand: 'Arduino',
+  },
+  {
+    name: 'Frans',
+    profession: 'Teacher',
+    brand: 'Windows',
+  },
+  {
+    name: 'Rimmert',
+    profession: 'Teacher',
+    brand: 'Apple',
+  },
+];
 
-  private readonly sound: string;
+function writeToTheDom() {
+  const tbody: HTMLElement = document.getElementById('teachers');
+  teachers.forEach((teacher) => {
+    const tr: HTMLTableRowElement = document.createElement('tr');
+    const tdName: HTMLTableCellElement = document.createElement('td');
+    const tdBrand: HTMLTableCellElement = document.createElement('td');
+    tdName.innerText = teacher.name;
+    tdBrand.innerText = teacher.brand;
+    tr.append(tdName, tdBrand);
+    tbody.append(tr);
+  });
+}
+writeToTheDom();
 
-  public constructor(name: string, legs: number, sound: string) {
-    this.name = name;
-    this.legs = legs;
-    this.sound = sound;
-  }
+class Car {
+  private brand: string;
 
-  public getName(): string {
-    return this.name;
-  }
+  private model: string;
 
-  public getLegs(): number {
-    return this.legs;
-  }
+  private fuel: string;
 
-  public getSound(): string {
-    return this.sound;
+  private speed: number;
+
+  private mileage: number;
+
+  constructor(
+    brand: string,
+    model: string,
+    fuel: string,
+    speed: number,
+    mileage: number,
+  ) {
+    this.brand = brand;
+    this.model = model;
+    this.fuel = fuel;
+    this.speed = speed;
+    this.mileage = mileage;
   }
 }
 
-const animals = [
-  new Animal('dog', 4, 'woof'),
-  new Animal('cat', 4, 'meow'),
-];
-
-animals.forEach(
-  (animal) => console.log(
-    'A %s has %s legs and goes %s!',
-    animal.getName(),
-    animal.getLegs(),
-    animal.getSound(),
-  ),
-);
+const volvo = new Car('Volvo', '240', 'Gas', 200, 200000);
+console.log(volvo);

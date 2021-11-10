@@ -1,0 +1,22 @@
+<mxfile host="65bd71144e">
+    <diagram id="R1FuCLrEH17biEioo9ac" name="Page-1">
+        <mxGraphModel dx="593" dy="675" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Hangman" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="180" width="300" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="- words: string[]&#10;- word: string&#10;- lettersOfWord: string[]&#10;- guessedLettersOfWord: string[]&#10;- lettersInDOM: HTMLDivElement&#10;- attemptInDom: HTMLDivElement&#10;- attempts: number" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+                    <mxGeometry y="26" width="300" height="114" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="2">
+                    <mxGeometry y="140" width="300" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="+ constructor()&#10;- splitWordInCharacters()&#10;- findletters(clickedLetter:string): number&#10;- guessLetter(e: Event)&#10;- addLetterToGuessedWord&#10;- writeAttemptToTheDOM()&#10;- setWord(newWord: string)&#10;- checkWinner()&#10;- writeGuessedWordToTheDOM()&#10;- writeAlphabetToTheDOM()&#10;- randomNumber(miin:number, max:number): number&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+                    <mxGeometry y="148" width="300" height="172" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
